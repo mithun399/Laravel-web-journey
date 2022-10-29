@@ -33,6 +33,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[dataController::class,'showData']);
 Route::get('delete/{id}',[dataController::class,'deleteData']);
+Route::get('restore/{id}',[dataController::class,'restoreData']);
+Route::get('pdelete/{id}',[dataController::class,'pdeleteData']);
+
 
 
 

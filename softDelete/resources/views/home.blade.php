@@ -57,7 +57,9 @@
       <td>{{$users->email}}</td>
       <td>{{$users->created_at->toDateString()}}</td>
       <td>
-       <a href="{{url('delete/'.$users->id)}}" class="btn btn-danger">Delete</a>
+       <a href="{{url('restore/'.$users->id)}}" class="btn btn-primary">Restore</a>
+
+       <a href="{{url('pdelete/'.$users->id)}}" class="btn btn-danger">Delete</a>
       </td>
     </tr>
    @endforeach

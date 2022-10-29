@@ -17,4 +17,12 @@ class dataController extends Controller
         $user=User::find($id)->delete();
         return redirect()->back();
     }
+    function restoreData($id){
+        $user=User::withTrashed()->find($id)->restore();
+        return redirect()->back();
+    }
+    function pdeleteData($id){
+        $user=User::withTrashed()->find($id)->forceDelete();
+        return redirect()->back();
+    }
 }
